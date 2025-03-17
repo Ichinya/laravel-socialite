@@ -1,0 +1,65 @@
+{
+    "name": "ichinya/laravel-socialite",
+    "description": "Socialite for Laravel",
+    "keywords": [
+        "Ichinya",
+        "laravel",
+        "laravel-socialite",
+        "socialite",
+        "oauth",
+        "oauth2",
+        "oauth2-client"
+    ],
+    "homepage": "https://github.com/ichinya/laravel-socialite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ichi",
+            "email": "ichi-perm@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "laravel/socialite": "*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Ichinya\\LaravelSocialite\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ichinya\\LaravelSocialite\\LaravelSocialiteServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSocialite": "Ichinya\\LaravelSocialite\\Facades\\LaravelSocialite"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
