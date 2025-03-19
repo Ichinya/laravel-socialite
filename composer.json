@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.0",
+        "laravel/framework": "^12.2",
         "laravel/socialite": "*"
     },
     "require-dev": {
